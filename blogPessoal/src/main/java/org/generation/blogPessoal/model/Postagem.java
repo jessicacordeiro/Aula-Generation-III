@@ -25,9 +25,7 @@ public class Postagem {
 	@Size(min = 10, max = 500)
 	private String texto;
 	
-	
 	private Date date = new java.sql.Date(System.currentTimeMillis());
-	
 	
 	public long getId() {
 		return id;
