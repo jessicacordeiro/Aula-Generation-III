@@ -1,6 +1,8 @@
 package com.ecommerce.GamesFlow.model;
 
 import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -21,7 +23,7 @@ public class Categorias {
 	@NotNull
 	private String nomeCategorias;
 	
-	@OneToMany(mappedBy = "categorias")
+	@OneToMany(mappedBy = "categorias", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categorias")
 	private List<Produtos> produtos;
 
