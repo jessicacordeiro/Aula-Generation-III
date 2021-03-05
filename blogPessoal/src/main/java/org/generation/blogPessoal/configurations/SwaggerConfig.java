@@ -26,7 +26,8 @@ public class SwaggerConfig {
 	
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
-				.title("blogPessoal")
+				.title("Blog Pessoal")
+				.description("API do Projeto de blog pessoal")
 				.version("1.0")
 				.contact(contact())
 				.build();
