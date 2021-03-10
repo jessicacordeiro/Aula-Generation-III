@@ -24,6 +24,7 @@ public class SwaggerConfig {
 				.build();
 	}
 	
+	@SuppressWarnings("unused")
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
 				.title("Blog Pessoal")
