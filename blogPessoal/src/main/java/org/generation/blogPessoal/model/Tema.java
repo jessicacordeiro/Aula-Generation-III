@@ -18,6 +18,7 @@ public class Tema {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
 	@NotNull private String descricao;
+	private long qtd;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
@@ -37,6 +38,14 @@ public class Tema {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public long getQtd() {
+		return qtd;
+	}
+
+	public void setQtd(long qtd) {
+		this.qtd = qtd;
 	}
 
 	public List<Postagem> getPostagem() {
